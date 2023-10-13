@@ -53,3 +53,31 @@ export default function Gallery() {
     </div>
   );
 }
+
+
+function Avatar({person, size, profession, awards, discovered}) {
+  return (
+    <img
+      className="avatar"
+      // you can also do person.prop.imageId
+      src={'https://i.imgur.com/' + person.imageId + '.jpg'}
+      alt={person.name}
+      width={size}
+      height={size}
+    />
+  );
+}
+
+export default function Profile() {
+  return (
+    <div>
+        <Avatar
+            person={{ name: 'Maria Skłodowska-Curie', imageId: 'szV5sdGs', profession: 'physicist and chemist', awards: 4, discovered: 'polonium (element)'
+           }}
+            size={70} />
+        <Avatar
+            person={{ name: 'Katsuko Saruhashi', imageId: 'YfeOqp2s'}}
+            size={70} />
+    </div>
+  );
+}

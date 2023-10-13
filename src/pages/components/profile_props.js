@@ -2,6 +2,7 @@ function Avatar({person, size}) {
   return (
     <img
       className="avatar"
+      // you can also do person.prop.imageId
       src={'https://i.imgur.com/' + person.imageId + 's.jpg'}
       alt={person.name}
       width={size}
